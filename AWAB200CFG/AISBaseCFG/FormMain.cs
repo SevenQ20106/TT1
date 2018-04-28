@@ -16,7 +16,8 @@ namespace AISBaseCFG
         {
             InitializeComponent();
             //
-//
+	    //
+            //
             InitBtnAtoNClick();
         }
 
