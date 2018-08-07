@@ -15,9 +15,6 @@ namespace AISBaseCFG
         public FormMain()
         {
             InitializeComponent();
-            //
-	    //
-            //
             InitBtnAtoNClick();
         }
 
@@ -155,7 +152,6 @@ namespace AISBaseCFG
             {
                 SendCMDToBase("!BEATHEART,*74\r\n");
             }
-
         }
 
         #region 变量定义
@@ -1197,6 +1193,7 @@ namespace AISBaseCFG
                         break;
                     case ConnType.TcpCli:
                         Timer_1s.Enabled = false;
+                        connImpl.CStatus = ConnStatus.Closed;
                         (connImpl as TcpCliImpl).ConnectedServer -= TCPCli_ConnectedServer;
                         (connImpl as TcpCliImpl).DisConnectedServer -= TCPCli_DisConnectedServer;
                         break;
@@ -2757,11 +2754,11 @@ namespace AISBaseCFG
             {
                 listError.Add("AtoN类型不能为空！\r\n");
             }
-            bFlag = RegexName2(txt_AtoN_Name.Text.Trim());
-            if (!bFlag)
-            {
-                listError.Add("AtoN名称由大写字母A_Z和数据0_9组成！\r\n");
-            }
+            //bFlag = RegexName2(txt_AtoN_Name.Text.Trim());
+            //if (!bFlag)
+            //{
+            //    listError.Add("AtoN名称由大写字母A_Z和数据0_9组成！\r\n");
+            //}
             if (cbx_AtoN_PosDeviceType.Text == "")
             {
                 listError.Add("FPFS不能为空！\r\n");

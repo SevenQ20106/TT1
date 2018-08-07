@@ -77,3 +77,16 @@ F:\Project\AWAB200CFG\AISBaseCFG\obj\Debug\AISBaseCFG.FormMain.resources
 F:\Project\AWAB200CFG\AISBaseCFG\obj\Debug\AISBaseCFG.IPAddressTextBox.resources
 F:\Project\AWAB200CFG\AISBaseCFG\obj\Debug\AISBaseCFG.Properties.Resources.resources
 F:\Project\AWAB200CFG\AISBaseCFG\obj\Debug\AISBaseCFG.csproj.GenerateResource.Cache
+F:\git\TT1\AWAB200CFG\AISBaseCFG\bin\Debug\AISBaseCFG.exe.config
+F:\git\TT1\AWAB200CFG\AISBaseCFG\bin\Debug\AISBaseCFG.exe
+F:\git\TT1\AWAB200CFG\AISBaseCFG\bin\Debug\AISBaseCFG.pdb
+F:\git\TT1\AWAB200CFG\AISBaseCFG\obj\Debug\AISBaseCFG.FormConn_Serialport.resources
+F:\git\TT1\AWAB200CFG\AISBaseCFG\obj\Debug\AISBaseCFG.FormConn_TcpCli.resources
+F:\git\TT1\AWAB200CFG\AISBaseCFG\obj\Debug\AISBaseCFG.FormDataDisplay.resources
+F:\git\TT1\AWAB200CFG\AISBaseCFG\obj\Debug\AISBaseCFG.FormMain.resources
+F:\git\TT1\AWAB200CFG\AISBaseCFG\obj\Debug\AISBaseCFG.IPAddressTextBox.resources
+F:\git\TT1\AWAB200CFG\AISBaseCFG\obj\Debug\AISBaseCFG.Properties.Resources.resources
+F:\git\TT1\AWAB200CFG\AISBaseCFG\obj\Debug\AISBaseCFG.csproj.GenerateResource.cache
+F:\git\TT1\AWAB200CFG\AISBaseCFG\obj\Debug\AISBaseCFG.csproj.CoreCompileInputs.cache
+F:\git\TT1\AWAB200CFG\AISBaseCFG\obj\Debug\AISBaseCFG.exe
+F:\git\TT1\AWAB200CFG\AISBaseCFG\obj\Debug\AISBaseCFG.pdb

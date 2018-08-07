@@ -79,7 +79,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_RepeatIndicator = new System.Windows.Forms.TextBox();
-            this.txt_BaseNum = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txt_MsgRetires = new System.Windows.Forms.TextBox();
@@ -406,6 +405,7 @@
             this.btn_AtoN_2 = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.txt_BaseNum = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -971,15 +971,6 @@
             this.txt_RepeatIndicator.Size = new System.Drawing.Size(32, 21);
             this.txt_RepeatIndicator.TabIndex = 13;
             this.txt_RepeatIndicator.Text = "0";
-            // 
-            // txt_BaseNum
-            // 
-            this.txt_BaseNum.Location = new System.Drawing.Point(106, 54);
-            this.txt_BaseNum.MaxLength = 15;
-            this.txt_BaseNum.Name = "txt_BaseNum";
-            this.txt_BaseNum.Size = new System.Drawing.Size(100, 21);
-            this.txt_BaseNum.TabIndex = 7;
-            this.txt_BaseNum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_InputNUMChar_KeyPress);
             // 
             // label5
             // 
@@ -4776,6 +4767,15 @@
             this.tabControl1.Size = new System.Drawing.Size(804, 510);
             this.tabControl1.TabIndex = 2;
             // 
+            // txt_BaseNum
+            // 
+            this.txt_BaseNum.Location = new System.Drawing.Point(106, 54);
+            this.txt_BaseNum.MaxLength = 15;
+            this.txt_BaseNum.Name = "txt_BaseNum";
+            this.txt_BaseNum.Size = new System.Drawing.Size(100, 21);
+            this.txt_BaseNum.TabIndex = 7;
+            this.txt_BaseNum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_InputNUMChar_KeyPress);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -4912,7 +4912,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_RepeatIndicator;
-        private System.Windows.Forms.TextBox txt_BaseNum;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txt_MsgRetires;
@@ -5239,6 +5238,7 @@
         private System.Windows.Forms.TextBox txtLocalPort_0;
         private System.Windows.Forms.Label label121;
         private System.Windows.Forms.Label label105;
+        private System.Windows.Forms.TextBox txt_BaseNum;
     }
 }
 

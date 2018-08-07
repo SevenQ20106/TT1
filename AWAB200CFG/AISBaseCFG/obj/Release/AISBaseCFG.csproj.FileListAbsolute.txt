@@ -34,3 +34,17 @@ D:\GitHub\TT1\AWAB200CFG\AISBaseCFG\obj\Release\AISBaseCFG.FormMain.resources
 D:\GitHub\TT1\AWAB200CFG\AISBaseCFG\obj\Release\AISBaseCFG.IPAddressTextBox.resources
 D:\GitHub\TT1\AWAB200CFG\AISBaseCFG\obj\Release\AISBaseCFG.Properties.Resources.resources
 D:\GitHub\TT1\AWAB200CFG\AISBaseCFG\obj\Release\AISBaseCFG.csproj.GenerateResource.Cache
+F:\git\TT1\AWAB200CFG\AISBaseCFG\bin\Release\AISBaseCFG.exe.config
+F:\git\TT1\AWAB200CFG\AISBaseCFG\bin\Release\AISBaseCFG.exe
+F:\git\TT1\AWAB200CFG\AISBaseCFG\bin\Release\AISBaseCFG.pdb
+F:\git\TT1\AWAB200CFG\AISBaseCFG\obj\Release\AISBaseCFG.csprojAssemblyReference.cache
+F:\git\TT1\AWAB200CFG\AISBaseCFG\obj\Release\AISBaseCFG.FormConn_Serialport.resources
+F:\git\TT1\AWAB200CFG\AISBaseCFG\obj\Release\AISBaseCFG.FormConn_TcpCli.resources
+F:\git\TT1\AWAB200CFG\AISBaseCFG\obj\Release\AISBaseCFG.FormDataDisplay.resources
+F:\git\TT1\AWAB200CFG\AISBaseCFG\obj\Release\AISBaseCFG.FormMain.resources
+F:\git\TT1\AWAB200CFG\AISBaseCFG\obj\Release\AISBaseCFG.IPAddressTextBox.resources
+F:\git\TT1\AWAB200CFG\AISBaseCFG\obj\Release\AISBaseCFG.Properties.Resources.resources
+F:\git\TT1\AWAB200CFG\AISBaseCFG\obj\Release\AISBaseCFG.csproj.GenerateResource.cache
+F:\git\TT1\AWAB200CFG\AISBaseCFG\obj\Release\AISBaseCFG.csproj.CoreCompileInputs.cache
+F:\git\TT1\AWAB200CFG\AISBaseCFG\obj\Release\AISBaseCFG.exe
+F:\git\TT1\AWAB200CFG\AISBaseCFG\obj\Release\AISBaseCFG.pdb
