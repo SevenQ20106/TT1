@@ -1790,6 +1790,61 @@ namespace AISBaseCFG
             return strPos;
         }
 
+        private string GetPostionToDMS(string Du, string Fen1, string Fen2, string LongOrLat)
+        {
+            if (string.IsNullOrEmpty(Du) && string.IsNullOrEmpty(Fen1) && string.IsNullOrEmpty(Fen2))
+            {
+                return "";
+            }
+            string strPos = "";
+            switch (LongOrLat)
+            {
+                case "Long":
+                    if (string.IsNullOrEmpty(Du))
+                    {
+                        strPos += "000";
+                    }
+                    else
+                    {
+                        strPos += Du.PadLeft(3, '0');
+                    }
+                    break;
+                case "Lat":
+                    if (string.IsNullOrEmpty(Du))
+                    {
+                        strPos += "00";
+                    }
+                    else
+                    {
+                        strPos += Du.PadLeft(2, '0');
+                    }
+                    break;
+                default:
+                    break;
+            }
+            strPos += "";
+            if (string.IsNullOrEmpty(Fen1))
+            {
+                strPos += "00";
+            }
+            else
+            {
+                strPos += Fen1.PadLeft(2, '0');
+            }
+            strPos += "＇";
+            if (string.IsNullOrEmpty(Fen2))
+            {
+                strPos += "00.000";
+            }
+            else
+            {
+                float ftemp = float.Parse("0." + Fen2) * 60;
+                strPos += ftemp.ToString("f3");
+            }
+            strPos += "″";
+            return strPos;
+        }
+
         private string GetPostionToDuFen(int Du, int Fen, double Seconds, string LongOrLat)
         {
             string strPos = "";
@@ -2094,7 +2149,7 @@ namespace AISBaseCFG
                 ShowError();
                 return;
             }
-            string strCMD = string.Format("$--IPM,{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12},{13},{14},{15},{16},{17},{18},{19}",                
+            string strCMD = string.Format("$--IPM,{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12},{13},{14},{15},{16},{17},{18},{19}",
                                                  txtWired_IP.Text,
                                                  txtLocalDataPort.Text,
                                                  txtLocalCFGPort.Text,
@@ -2920,7 +2975,6 @@ namespace AISBaseCFG
             bool flag = Regex.IsMatch(str, @"^[A-Z0-9\s]+$");
             return flag;
         }
-
         private string EnCodeATN()
         {
             if (!CheckATN())
@@ -2971,11 +3025,19 @@ namespace AISBaseCFG
             }
         }
 
-
         private void SendAtoN()
         {
-            string strCMD_ATN = EnCodeATN();
-            if (strCMD_ATN == "")
+            string strCMD_ATN = "";
+            //string strCMD_ATN = EnCodeATN();
+            //if (strCMD_ATN == "")
+            //{
+            //    return;
+            //}
+            string Latitude = GetPostionToDMS(txt_ATN_LatDu.Text.Trim(), txt_ATN_LatFen.Text.Trim(), txt_ATN_LatSecond.Text.Trim(), "Lat") + " " + ckb_ATN_NS.Text;
+            string Longitude = GetPostionToDMS(txt_ATN_LongDu.Text.Trim(), txt_ATN_LongFen.Text.Trim(), txt_ATN_LongSeconds.Text.Trim(), "Long") + " " + ckb_ATN_EW.Text;
+            string MsgContent = "确认要设置虚拟航标?\r\n" + $"经度:{Longitude}\r\n" + $"纬度: {Latitude}";
+            DialogResult drst = MessageBox.Show(MsgContent, "设置航标确认", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (drst != DialogResult.Yes)
             {
                 return;
             }
@@ -3322,8 +3384,53 @@ namespace AISBaseCFG
 
 
 
+
+
         #endregion
 
+        FormDMS frmDms;
+        private void btnDMS_Click(object sender, EventArgs e)
+        {
+            if (frmDms == null)
+            {
+                frmDms = new FormDMS();
+            }
+            DialogResult dr = frmDms.ShowDialog();
+            if (dr == DialogResult.OK)
+            {
+                //纬度
+                txt_ATN_LongDu.Text = $"{frmDms.LongDu}";
+                txt_ATN_LongFen.Text = $"{frmDms.LongMin}";
+                float SecTemp = (frmDms.LongSec / 60);
+                int index = SecTemp.ToString().IndexOf('.');
+                if (index == -1)
+                {
+                    txt_ATN_LongSeconds.Text = $"{0}";
+                }
+                else
+                {
+                    txt_ATN_LongSeconds.Text = $"{SecTemp.ToString().Substring(index + 1)}";
+                }
 
+                //经度
+
+                txt_ATN_LatDu.Text = $"{frmDms.LatDu}";
+                txt_ATN_LatFen.Text = $"{frmDms.LatMin}";
+                SecTemp = (frmDms.LatSec / 60);
+                index = SecTemp.ToString().IndexOf('.');
+                if (index == -1)
+                {
+                    txt_ATN_LatSecond.Text = $"{0}";
+                }
+                else
+                {
+                    txt_ATN_LatSecond.Text = $"{SecTemp.ToString().Substring(index + 1)}";
+                }
+
+
+                frmDms.Dispose();
+                frmDms = null;
+            }
+        }
     }
 }

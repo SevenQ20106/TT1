@@ -79,6 +79,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_RepeatIndicator = new System.Windows.Forms.TextBox();
+            this.txt_BaseNum = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txt_MsgRetires = new System.Windows.Forms.TextBox();
@@ -111,9 +112,6 @@
             this.gpNet0 = new System.Windows.Forms.GroupBox();
             this.txtWired_MAC = new System.Windows.Forms.TextBox();
             this.label119 = new System.Windows.Forms.Label();
-            this.txtWired_Gateway = new AISBaseCFG.IPAddressTextBox();
-            this.txtWired_SubNetMask = new AISBaseCFG.IPAddressTextBox();
-            this.txtWired_IP = new AISBaseCFG.IPAddressTextBox();
             this.label187 = new System.Windows.Forms.Label();
             this.label188 = new System.Windows.Forms.Label();
             this.label189 = new System.Windows.Forms.Label();
@@ -130,9 +128,6 @@
             this.txtLocalPort_2 = new System.Windows.Forms.TextBox();
             this.txtLocalPort_1 = new System.Windows.Forms.TextBox();
             this.txtLocalPort_0 = new System.Windows.Forms.TextBox();
-            this.txtAddr_IP_3 = new AISBaseCFG.IPAddressTextBox();
-            this.txtAddr_IP_2 = new AISBaseCFG.IPAddressTextBox();
-            this.txtAddr_IP_1 = new AISBaseCFG.IPAddressTextBox();
             this.txtDesPort_3 = new System.Windows.Forms.TextBox();
             this.label125 = new System.Windows.Forms.Label();
             this.txtDesPort_2 = new System.Windows.Forms.TextBox();
@@ -141,7 +136,6 @@
             this.label127 = new System.Windows.Forms.Label();
             this.txtDesPort_0 = new System.Windows.Forms.TextBox();
             this.label122 = new System.Windows.Forms.Label();
-            this.txtAddr_IP_0 = new AISBaseCFG.IPAddressTextBox();
             this.tPTimeSlot = new System.Windows.Forms.TabPage();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.txtChBSlotCounts17 = new System.Windows.Forms.TextBox();
@@ -335,6 +329,7 @@
             this.label118 = new System.Windows.Forms.Label();
             this.txtSizeA = new System.Windows.Forms.TextBox();
             this.groupBox18 = new System.Windows.Forms.GroupBox();
+            this.btnDMS = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.ckb_ATN_NS = new System.Windows.Forms.ComboBox();
             this.ckb_ATN_EW = new System.Windows.Forms.ComboBox();
@@ -405,7 +400,13 @@
             this.btn_AtoN_2 = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.txt_BaseNum = new System.Windows.Forms.TextBox();
+            this.txtWired_Gateway = new AISBaseCFG.IPAddressTextBox();
+            this.txtWired_SubNetMask = new AISBaseCFG.IPAddressTextBox();
+            this.txtWired_IP = new AISBaseCFG.IPAddressTextBox();
+            this.txtAddr_IP_3 = new AISBaseCFG.IPAddressTextBox();
+            this.txtAddr_IP_2 = new AISBaseCFG.IPAddressTextBox();
+            this.txtAddr_IP_1 = new AISBaseCFG.IPAddressTextBox();
+            this.txtAddr_IP_0 = new AISBaseCFG.IPAddressTextBox();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -578,7 +579,6 @@
             // 
             // btn_SetCMD
             // 
-            this.btn_SetCMD.Enabled = false;
             this.btn_SetCMD.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_SetCMD.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btn_SetCMD.Location = new System.Drawing.Point(674, 197);
@@ -972,6 +972,15 @@
             this.txt_RepeatIndicator.TabIndex = 13;
             this.txt_RepeatIndicator.Text = "0";
             // 
+            // txt_BaseNum
+            // 
+            this.txt_BaseNum.Location = new System.Drawing.Point(106, 54);
+            this.txt_BaseNum.MaxLength = 15;
+            this.txt_BaseNum.Name = "txt_BaseNum";
+            this.txt_BaseNum.Size = new System.Drawing.Size(100, 21);
+            this.txt_BaseNum.TabIndex = 7;
+            this.txt_BaseNum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_InputNUMChar_KeyPress);
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -1311,33 +1320,6 @@
             this.label119.TabIndex = 24;
             this.label119.Text = "MAC地址：";
             // 
-            // txtWired_Gateway
-            // 
-            this.txtWired_Gateway.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.txtWired_Gateway.Location = new System.Drawing.Point(80, 86);
-            this.txtWired_Gateway.Name = "txtWired_Gateway";
-            this.txtWired_Gateway.Size = new System.Drawing.Size(134, 26);
-            this.txtWired_Gateway.TabIndex = 11;
-            this.txtWired_Gateway.Value = ((System.Net.IPAddress)(resources.GetObject("txtWired_Gateway.Value")));
-            // 
-            // txtWired_SubNetMask
-            // 
-            this.txtWired_SubNetMask.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.txtWired_SubNetMask.Location = new System.Drawing.Point(80, 54);
-            this.txtWired_SubNetMask.Name = "txtWired_SubNetMask";
-            this.txtWired_SubNetMask.Size = new System.Drawing.Size(134, 26);
-            this.txtWired_SubNetMask.TabIndex = 10;
-            this.txtWired_SubNetMask.Value = ((System.Net.IPAddress)(resources.GetObject("txtWired_SubNetMask.Value")));
-            // 
-            // txtWired_IP
-            // 
-            this.txtWired_IP.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.txtWired_IP.Location = new System.Drawing.Point(80, 22);
-            this.txtWired_IP.Name = "txtWired_IP";
-            this.txtWired_IP.Size = new System.Drawing.Size(134, 26);
-            this.txtWired_IP.TabIndex = 9;
-            this.txtWired_IP.Value = ((System.Net.IPAddress)(resources.GetObject("txtWired_IP.Value")));
-            // 
             // label187
             // 
             this.label187.AutoSize = true;
@@ -1528,33 +1510,6 @@
             this.txtLocalPort_0.TextChanged += new System.EventHandler(this.txtPort_TextChanged);
             this.txtLocalPort_0.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_InputNUM_KeyPress);
             // 
-            // txtAddr_IP_3
-            // 
-            this.txtAddr_IP_3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.txtAddr_IP_3.Location = new System.Drawing.Point(108, 137);
-            this.txtAddr_IP_3.Name = "txtAddr_IP_3";
-            this.txtAddr_IP_3.Size = new System.Drawing.Size(134, 26);
-            this.txtAddr_IP_3.TabIndex = 58;
-            this.txtAddr_IP_3.Value = ((System.Net.IPAddress)(resources.GetObject("txtAddr_IP_3.Value")));
-            // 
-            // txtAddr_IP_2
-            // 
-            this.txtAddr_IP_2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.txtAddr_IP_2.Location = new System.Drawing.Point(108, 105);
-            this.txtAddr_IP_2.Name = "txtAddr_IP_2";
-            this.txtAddr_IP_2.Size = new System.Drawing.Size(134, 26);
-            this.txtAddr_IP_2.TabIndex = 57;
-            this.txtAddr_IP_2.Value = ((System.Net.IPAddress)(resources.GetObject("txtAddr_IP_2.Value")));
-            // 
-            // txtAddr_IP_1
-            // 
-            this.txtAddr_IP_1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.txtAddr_IP_1.Location = new System.Drawing.Point(108, 72);
-            this.txtAddr_IP_1.Name = "txtAddr_IP_1";
-            this.txtAddr_IP_1.Size = new System.Drawing.Size(134, 26);
-            this.txtAddr_IP_1.TabIndex = 56;
-            this.txtAddr_IP_1.Value = ((System.Net.IPAddress)(resources.GetObject("txtAddr_IP_1.Value")));
-            // 
             // txtDesPort_3
             // 
             this.txtDesPort_3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -1638,15 +1593,6 @@
             this.label122.Size = new System.Drawing.Size(89, 12);
             this.label122.TabIndex = 45;
             this.label122.Text = "目的地址&&端口:";
-            // 
-            // txtAddr_IP_0
-            // 
-            this.txtAddr_IP_0.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.txtAddr_IP_0.Location = new System.Drawing.Point(108, 41);
-            this.txtAddr_IP_0.Name = "txtAddr_IP_0";
-            this.txtAddr_IP_0.Size = new System.Drawing.Size(134, 26);
-            this.txtAddr_IP_0.TabIndex = 11;
-            this.txtAddr_IP_0.Value = ((System.Net.IPAddress)(resources.GetObject("txtAddr_IP_0.Value")));
             // 
             // tPTimeSlot
             // 
@@ -4020,6 +3966,7 @@
             // 
             // groupBox18
             // 
+            this.groupBox18.Controls.Add(this.btnDMS);
             this.groupBox18.Controls.Add(this.panel3);
             this.groupBox18.Location = new System.Drawing.Point(312, 3);
             this.groupBox18.Name = "groupBox18";
@@ -4027,6 +3974,16 @@
             this.groupBox18.TabIndex = 37;
             this.groupBox18.TabStop = false;
             this.groupBox18.Text = "定位";
+            // 
+            // btnDMS
+            // 
+            this.btnDMS.Location = new System.Drawing.Point(41, -5);
+            this.btnDMS.Name = "btnDMS";
+            this.btnDMS.Size = new System.Drawing.Size(46, 23);
+            this.btnDMS.TabIndex = 37;
+            this.btnDMS.Text = "DMS";
+            this.btnDMS.UseVisualStyleBackColor = true;
+            this.btnDMS.Click += new System.EventHandler(this.btnDMS_Click);
             // 
             // panel3
             // 
@@ -4767,14 +4724,68 @@
             this.tabControl1.Size = new System.Drawing.Size(804, 510);
             this.tabControl1.TabIndex = 2;
             // 
-            // txt_BaseNum
+            // txtWired_Gateway
             // 
-            this.txt_BaseNum.Location = new System.Drawing.Point(106, 54);
-            this.txt_BaseNum.MaxLength = 15;
-            this.txt_BaseNum.Name = "txt_BaseNum";
-            this.txt_BaseNum.Size = new System.Drawing.Size(100, 21);
-            this.txt_BaseNum.TabIndex = 7;
-            this.txt_BaseNum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_InputNUMChar_KeyPress);
+            this.txtWired_Gateway.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.txtWired_Gateway.Location = new System.Drawing.Point(80, 86);
+            this.txtWired_Gateway.Name = "txtWired_Gateway";
+            this.txtWired_Gateway.Size = new System.Drawing.Size(134, 26);
+            this.txtWired_Gateway.TabIndex = 11;
+            this.txtWired_Gateway.Value = ((System.Net.IPAddress)(resources.GetObject("txtWired_Gateway.Value")));
+            // 
+            // txtWired_SubNetMask
+            // 
+            this.txtWired_SubNetMask.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.txtWired_SubNetMask.Location = new System.Drawing.Point(80, 54);
+            this.txtWired_SubNetMask.Name = "txtWired_SubNetMask";
+            this.txtWired_SubNetMask.Size = new System.Drawing.Size(134, 26);
+            this.txtWired_SubNetMask.TabIndex = 10;
+            this.txtWired_SubNetMask.Value = ((System.Net.IPAddress)(resources.GetObject("txtWired_SubNetMask.Value")));
+            // 
+            // txtWired_IP
+            // 
+            this.txtWired_IP.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.txtWired_IP.Location = new System.Drawing.Point(80, 22);
+            this.txtWired_IP.Name = "txtWired_IP";
+            this.txtWired_IP.Size = new System.Drawing.Size(134, 26);
+            this.txtWired_IP.TabIndex = 9;
+            this.txtWired_IP.Value = ((System.Net.IPAddress)(resources.GetObject("txtWired_IP.Value")));
+            // 
+            // txtAddr_IP_3
+            // 
+            this.txtAddr_IP_3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.txtAddr_IP_3.Location = new System.Drawing.Point(108, 137);
+            this.txtAddr_IP_3.Name = "txtAddr_IP_3";
+            this.txtAddr_IP_3.Size = new System.Drawing.Size(134, 26);
+            this.txtAddr_IP_3.TabIndex = 58;
+            this.txtAddr_IP_3.Value = ((System.Net.IPAddress)(resources.GetObject("txtAddr_IP_3.Value")));
+            // 
+            // txtAddr_IP_2
+            // 
+            this.txtAddr_IP_2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.txtAddr_IP_2.Location = new System.Drawing.Point(108, 105);
+            this.txtAddr_IP_2.Name = "txtAddr_IP_2";
+            this.txtAddr_IP_2.Size = new System.Drawing.Size(134, 26);
+            this.txtAddr_IP_2.TabIndex = 57;
+            this.txtAddr_IP_2.Value = ((System.Net.IPAddress)(resources.GetObject("txtAddr_IP_2.Value")));
+            // 
+            // txtAddr_IP_1
+            // 
+            this.txtAddr_IP_1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.txtAddr_IP_1.Location = new System.Drawing.Point(108, 72);
+            this.txtAddr_IP_1.Name = "txtAddr_IP_1";
+            this.txtAddr_IP_1.Size = new System.Drawing.Size(134, 26);
+            this.txtAddr_IP_1.TabIndex = 56;
+            this.txtAddr_IP_1.Value = ((System.Net.IPAddress)(resources.GetObject("txtAddr_IP_1.Value")));
+            // 
+            // txtAddr_IP_0
+            // 
+            this.txtAddr_IP_0.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.txtAddr_IP_0.Location = new System.Drawing.Point(108, 41);
+            this.txtAddr_IP_0.Name = "txtAddr_IP_0";
+            this.txtAddr_IP_0.Size = new System.Drawing.Size(134, 26);
+            this.txtAddr_IP_0.TabIndex = 11;
+            this.txtAddr_IP_0.Value = ((System.Net.IPAddress)(resources.GetObject("txtAddr_IP_0.Value")));
             // 
             // FormMain
             // 
@@ -5239,6 +5250,7 @@
         private System.Windows.Forms.Label label121;
         private System.Windows.Forms.Label label105;
         private System.Windows.Forms.TextBox txt_BaseNum;
+        private System.Windows.Forms.Button btnDMS;
     }
 }
 
